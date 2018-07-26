@@ -1,0 +1,388 @@
+@import 'base.scss';
+.w1065{  //1065-1200
+    header{
+        .container{
+            .sideRight{
+                // display: none;
+            }
+        }
+    }
+}
+
+.w800,.w600,.small,.xsmall{  //800-1065
+    
+    header{
+        .container{
+            .sideRight{
+                display: none;
+            }            
+        }
+    }
+    .index{
+        .userInfo{
+            ul{
+                li{
+                    &:nth-child(1){
+                        &::before{
+                            width: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .authorize {
+        .authorizeList {
+            .authorHeader {
+                .sideTwo{
+                    p{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .detail .detailBox .detailList .list li span:nth-child(7){
+        width: 0;
+    }
+
+    .addSeal .createSeal .autoWay .sideRight{
+        padding-right: 50px;
+    }
+    .userCenter .contacts .addressBook .sideRight .table .addressBookList li .selectBox{
+        right: 10px;
+        top: 40px;
+    }
+    .userCenter .contacts .nearCon .table .nearConList li .selectBox{
+        right: 10px;
+        top: 40px;
+    }
+}
+
+.w600,.small,.xsmall{  //660-800
+    
+    header{
+        .container{
+            .sideLeft{
+                li{
+                    display: none;
+                    &:nth-child(1){
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    .index{
+        .userInfo{
+            ul{
+                li{
+                    &:nth-child(1){
+                        h3{
+                            @include box;
+                            b{
+                                @include flexBox;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .realNo{
+            overflow-x: hidden;
+            ul{
+                width: 400px;
+                position: relative;
+                left: 50%;
+                margin-left: -120px;
+                li{
+                    display: block;
+                    position: relative;
+                    width: 50%;
+                    padding:0;
+                    line-height: 30px;
+                    &::before{
+                        top:10px;
+                    }
+                }
+            }
+        }
+        .menuTab{
+            ul{
+                li{
+                    i{
+                        font-size: 0;
+                    }
+                    h3{
+                        font-size: 20px;
+                        padding-left: 20%;
+                    }
+                    p{
+                        padding-left: 20%;
+                    }
+                }
+            }
+        }
+    }
+    .manaFile{
+        .timeSelect{
+            .sideLeft{
+                float: none;
+                width: 100%;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+            .sideRight{
+                width: 100%;
+                ul{
+                    li{
+                        &:last-child{
+                            width:calc(100% - 282px);
+                        }
+                        .timeDuration {
+                            width: 98%;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .authorize{
+        .info{
+            .sideLeft{
+                width: 100%;
+                border-right: 0;
+            }
+            .sideRight{
+                display: none;
+            }
+        }
+        .authorizeList {
+            .authorHeader {
+                .second{
+                    display: none;
+                }
+                .sideOne,.sideFour,.sideThree{
+                    width: 33.3%;
+                }
+                .sideThree{
+                    &::before{
+                        width: 0;
+                    }
+                }
+            }
+        }
+    }
+    .userCenter{
+        .userBody{
+            .contacts{
+                .addressBook{
+                    .sideLeft{
+                        display: none;
+                    }
+                    .sideRight{
+                        margin-left:0;
+                    }
+                }
+            }
+        }
+    }
+    .toFill{
+        .setting{
+            .item{
+                .selectList{
+                    .noOrderSign{
+                        li{
+                            span{
+                                &:nth-child(2){
+                                    width: 50px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .detail .detailBox .detailList .sender span:nth-child(5){
+        display: none;
+    }
+    .addSeal .createSeal .autoWay .autoWayBox{
+        display: block;
+        .sideLeft{
+            margin: 0 auto;
+        }
+        .sideRight{
+            padding-top:0;
+        }
+    }
+    
+    .page-num{
+        display: none;
+    } 
+    .panel-box .table li.icon::before{
+        left: 12px;
+    }
+}
+
+.small,.xsmall{
+    .contain{
+        width: 100%;
+    }
+    .index{
+        .userInfo{
+            ul{
+                li{
+                    &:nth-child(1){
+                        display: none;
+                    }
+                    width: (100/3)*1%;
+                    &:last-child{
+                        &::before{
+                            width:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .manaFile{
+        .timeSelect{
+            .sideRight{
+                ul{
+                    li{
+                        .icon-calendar{
+                            display: none;
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    .userCenter{
+        .nav{
+            .userNav{
+                ul{
+                    li{
+                        i{
+                            font-size: 0;
+                        }
+                        a{
+                            top: -6px;
+                        }
+                    }
+                }
+            }
+        }
+        .userBody{
+            .account{
+                .info {
+                    .sideLeft{
+                        width: auto;
+                        img{
+                            display: none;
+                        }
+                        h3,p{
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .buyRecored{
+            .record{
+                ul{li{a{display: none}}}
+            }
+        }
+        
+    }
+    .authorize{
+        .authorizeList {
+            .list{
+                .item{
+                    .item4{
+                        width: 0;
+                        a{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .news{
+        .newsTable{
+            .table{
+                ul{
+                    li{
+                        span{                            
+                            &:nth-child(1){
+                                flex-basis: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .toFill{
+        .setting {
+            .item{
+                .sideRight{
+                    .calendarBox{
+                        width: 130px;
+                    }
+                    .time{
+                        padding-left:10px;
+                    }
+                }
+                .selectList{
+                    ul{
+                        li{
+                            i{
+                                display: none;
+                            }
+                            span{
+                                &:nth-child(5){
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sign{
+        .sideLeft{
+            display: none;
+        }
+    }
+    .userCenter .seal .sealBox ul li a .operation{
+        display: none !important;
+    }
+    .detail .detailBox .detailList .list li span{
+        &:nth-child(8),&:nth-child(6){
+            display: none;
+        }
+        &:nth-child(4){
+            width: 100px;
+        }
+    }
+    .detail .detailBox .detailList .sender span:nth-child(4){
+        display: none;
+    }
+}
+.xsmall{
+    .panel-box .table.table-file span:last-child{
+        display: none;
+    }
+    .detail .detailBox .info .sideRight{
+        display: none;
+    }
+}

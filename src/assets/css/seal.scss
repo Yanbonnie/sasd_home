@@ -1,0 +1,648 @@
+
+/*我的印章*/
+.seal{        
+    // padding-top: 15px;
+    .addCert{
+        h3{
+            
+            padding: 75px 0 32px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span{
+                font-size: 20px;
+                font-weight: normal;
+                margin-left:10px;
+            }
+        }
+        .addCertInfo{
+            border: 1px $PINK solid;            
+            .step{
+                height: 63px;
+                line-height: 63px;
+                display: flex;
+                align-items: center;
+                background: $QPINK;
+                
+                border-bottom: 1px $PINK solid;
+                span{
+                    display: flex;                    
+                    align-items: center;
+                    b{
+                        width: 20px;
+                        height: 20px;
+                        border: 1px $ACTIVECOLOR solid;
+                        border-radius: 100%;
+                        display:block;
+                        line-height: 20px;
+                        text-align: center;
+                        font-weight: normal;
+                        margin-right: 10px;
+                        color: $ACTIVECOLOR;
+                    }
+                    strong{
+                        font-size: 16px;
+                        font-weight:normal;
+                    }
+                    &:nth-child(1){
+                        flex-basis: 30%;
+                        text-align: right;
+                        justify-content: flex-end;
+                        
+                    }
+                    &:nth-child(2){
+                        flex-basis: 40%;
+                        padding: 0 40px;
+                        i{
+                            width: 100%;
+                            height: 0;
+                            border-bottom: 1px $ACTIVECOLOR dashed;
+                        }
+                    }
+                    &:nth-child(3){
+                        flex-basis: 30%;
+                    }
+                }
+            }
+            .oper{
+                display: flex;
+                &>div{
+                    flex-basis: 50%;
+                    padding-bottom:33px; 
+                    &:nth-child(1){
+                        border-right: 1px $BORDER solid;
+                    }   
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 32px;
+                    padding: 40px 0  25px;
+                    text-align: center;
+                }
+                a{
+                    width: 130px;
+                    height: 38px;
+                    line-height: 38px;
+                    text-align: center;
+                    background: $ACTIVECOLOR;
+                    border-radius: 100px;
+                    box-shadow: 0 3px 8px 0 $ACTIVECOLOR5;
+                    margin: 0 auto;
+                    display: block;
+                    color: $WHITE;
+                }
+            }
+        }
+    }
+    //第一页面
+    .sealBox{
+        margin-top: 40px;
+        border: 1px $BORDER solid;
+        h3{
+            font-size: 14px;
+            line-height: 50px;
+            height: 50px;
+            padding-left: 2.5%;
+            font-weight: normal;
+            border-bottom: 1px $BORDER solid;
+            span{
+              // border-left:1px $BORDER solid;
+              padding-left:15px;
+              color: $ACTIVECOLOR;
+              float: right;
+              cursor: pointer;
+              position: relative;
+              &:before{
+                content: '.';
+                height: 40px;
+                width: 1px;
+                background:$BORDER;
+                position: absolute;
+                left: 0px;
+                top:5px;
+                font-size: 0;
+              }
+              i{
+                margin-right: 5px;
+                font-size: 18px;
+              }
+              padding-right:15px;
+            }
+        }
+        ul{
+            padding:0 2% 50px;
+            // max-width:1160px;
+            margin: 0 auto;
+            li{
+                width:330px;
+                float: left;
+                margin-top: 50px;
+                a{
+                    width: 90%;
+                    max-width: 300px;
+                    height: 180px;
+                    display: block;
+                    margin: 0 auto;
+                    background: #FFFFFF;
+                    box-shadow: 0 4px 10px 0 rgba(190,190,190,0.40);
+                    position: relative;
+                    cursor: default;
+                    .default{
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        left: 0;
+                        top:0;
+                        z-index:2;
+                    }
+                    b{
+                        width:300px;
+                        height: 180px;
+                        text-align: center;
+                        /*垂直居中*/
+                        display: table-cell;
+                        vertical-align: middle;
+                        margin: 0 auto;
+                        img{
+                            max-width: 85%;
+                            max-height: 85%;
+                            max-width: 255px;
+                            box-sizing: border-box;
+                            margin: 0 auto;
+                        }
+                    }
+                    .operation{
+                        height: 46px;
+                        line-height: 46px;
+                        padding: 2px 0;
+                        box-shadow: 0 -2px 2px 0 rgba(240,240,240,0.40);
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        background: rgba(204,204,204,0.5);
+                        display: none;
+                        cursor: pointer;
+                        span{
+                            width: 50%;
+                            float: left;
+                            text-align: center;
+                            color: $FONTCOLOR;
+                            i{
+                                margin-right: 8px;
+                            }
+                            &:hover{
+                                color: $ACTIVECOLOR;
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            color:#4b4b4b;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /*个人账户添加签章*/
+    .addSealBox{
+        position: relative;
+        top: -30px;
+        .addSealBody{
+            .ewm{
+                padding: 20px;                    
+                margin: 0 auto 0;
+                p{
+                    text-align: center;
+                    line-height: 80px;
+                    font-size: 16px;
+                    a{
+                        color: $ACTIVECOLOR;
+                        font-size: 16px;
+                    }
+                }
+                img{
+                    width: 165px;
+                    height: 165px;
+                    border: 1px $BORDER solid;
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            .tipBox{
+                background: #FDFDFD;
+                padding: 50px 50px 0;
+                border: 1px $BORDER solid;
+                ul{
+                    width: 100%;
+                    margin: 0 auto;
+                    
+                    li{
+                        @include flexBox;
+                        img{
+                            display: block;
+                            margin: 0 auto;
+                            padding-bottom: 20px;
+                        }
+                        p{
+                            line-height: 50px;
+                            text-align: center;
+                            span{
+                                width: 25px;
+                                height: 25px;
+                                line-height: 25px;
+                                text-align: center;
+                                margin: 0 auto;
+                                display: block;
+                                border: 1px #676767 solid;
+                                border-radius:100%;
+                            }
+                        }
+                    }
+                }
+                h3{
+                    font-weight: normal;
+                    text-align: center;
+                    height: 60px;
+                    line-height: 60px;
+                    border-top: 1px $BORDER solid;
+                    font-size: 16px;
+                    i{
+                        color: $ACTIVECOLOR;
+                        margin-right: 15px
+                    }
+                    span{
+                        color: $ACTIVECOLOR;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }          
+    }
+    //接受授权证书列表
+    .acceptCert{
+        margin-top:30px;
+        border: 1px $BORDER solid;
+        h3{
+            font-weight: normal;
+            line-height: 50px;
+            border-bottom: 1px solid $BORDER;
+            padding-left: 20px;
+        }
+        ul{
+            padding: 0 20px;
+            li{
+                display: flex;
+                align-items: center;
+                border-bottom: 1px $BORDER solid;
+                height: 50px;
+                &:last-child{
+                    border-bottom: 0;
+                }
+                span{
+                    &:first-child{
+                        flex-grow: 1;
+                    }
+                    &:last-child{
+                        flex-basis: 200px;
+                        text-align: right;
+                    }
+                }
+                a{
+                    width: 80px;
+                    border:1px $ACTIVECOLOR solid;
+                    color: $ACTIVECOLOR;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius: 50px;
+                    display: inline-block;
+                    text-align: center;
+                    
+                    &:hover{
+                        background: $ACTIVECOLOR;
+                        color: #fff;
+                    }
+                }
+            }
+            
+        }
+    }
+    /*查看证书*/
+    .lookCertCover{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        z-index: 10;
+        background:rgba(0,0,0,0.8);
+        .lookCert{
+            width:670px;
+            height:393px;
+            background: url($URL+'cert.png');
+            background-size:100% 100%;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-335px;
+            margin-top: -186.5px;
+            .close{
+                position:absolute;
+                right: -25px;
+                top:-25px;
+                color:$WHITE;
+                font-size:20px;
+            }
+            .certPage{
+                height:100%;
+                width:100%;
+                img{
+                    width: 100%;
+                    &.seal{
+                        width: 16%;
+                        position: absolute;
+                        right: 7%;
+                        bottom: 50px;
+                        padding-bottom: 0;
+                    }
+                }
+                h3{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 10%;
+                    left:0;
+                    border: 0;
+                    color: #3a3b3b;
+                    font-size: 30px;
+                    font-weight: normal;
+                }
+                ul{
+                    width: 80%;
+                    left: 10%;
+                    position: absolute;
+                    top: 25%;
+                    li{
+                        padding: 10px 0;
+                        color: #6E7571;
+                        label{
+                            width: 100px;
+                            display: flex;
+                            font-size: 16px;
+                        }
+                        p{
+                            @include flexBox;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+    .pinDialog{
+        .pinBox{
+            // min-height: 60px;
+            p{
+                text-align: left;
+                padding-left: 10%;
+                color: $ACTIVECOLOR;
+            }
+        }
+        input{
+            width: 80%;
+            margin: 0 auto;
+            border: 1px $BORDER solid;
+            text-indent: 10px;
+            height: 35px;
+            line-height: 35px;
+        }
+    }
+}
+/*企业添加签章*/
+.addSeal{
+    .createSeal{
+        border: 1px $BORDER solid;
+        margin-top: 15px;
+        .title{
+            line-height: 50px;
+            height: 50px;
+            padding-left: 20px;
+            border-bottom: 1px $BORDER solid;
+        }
+        .autoWay{
+            // display: none;
+            .sideLeft{
+                width:300px;
+                .imgBox{
+                    width: 300px;
+                    height: 300px;
+                    text-align: center;
+                    .signet{
+                        width: 300px;
+                        height: 300px;
+                        margin: 0 auto;
+                    }
+                    /*垂直居中*/
+                    // display: table-cell;
+                    // vertical-align: middle;
+                    // img{
+                    //     max-width: 100%;
+                    //     max-height: 100%;
+                    //     padding: 20px;
+                    //     box-sizing: border-box;
+                    //     margin: 0 auto;
+                    // }
+                }
+            }
+            .sideRight{
+                @include flexBox;
+                padding-right: 200px;
+                padding-top: 80px;
+                p{
+                    margin-bottom: 25px;
+                    height:40px;
+                    line-height: 40px;
+                    label{
+                        width: 100px;
+                        display:block;
+                        text-align: right;
+                        padding-right:20px;
+                        b{
+                            margin-right: 5px;
+                            color: $ACTIVECOLOR;
+                        }
+                    }
+                    input{
+                        @include flexBox;
+                        display: block;
+                        height:40px;
+                        line-height: 40px;
+                        border: 1px $BORDER solid;
+                        text-indent:5px;
+                    }
+                    select{
+                        @include flexBox;
+                        display: block;
+                        height:40px;
+                        line-height: 40px;
+                        border: 1px $BORDER solid;
+                    }
+                }
+            }
+            .line{
+                padding: 40px 0;
+                text-align: center;
+                border-top: 2px $BORDER dashed;
+                position: relative;;
+                span{
+                    position: absolute;
+                    width: 50px;
+                    height: 20px;
+                    line-height: 20px;
+                    color:$BORDER;
+                    left:50%;
+                    margin-left: -25px;
+                    top: -10px;
+                    background:#fff;
+                    text-align: center;
+                }
+                a{
+                    color: $ACTIVECOLOR;
+                    text-decoration:underline; 
+                }
+            }
+        }
+        .imgWay{
+            display: none;
+            border-bottom: 1px $BORDER solid;
+            padding:0 0 30px;
+            .line{
+                padding: 40px 0;
+                text-align: center;
+                border-bottom: 2px $BORDER dashed;
+                position: relative;;
+                span{
+                    position: absolute;
+                    width: 50px;
+                    height: 20px;
+                    line-height: 20px;
+                    color:$BORDER;
+                    left:50%;
+                    margin-left: -25px;
+                    bottom: -10px;
+                    background:#fff;
+                    text-align: center;
+                }
+                a{
+                    color: $ACTIVECOLOR;
+                    text-decoration:underline; 
+                }
+            }
+            
+            .drap{
+                padding-top: 50px;
+                max-width: 650px;   
+                width: 80%;             
+                margin: 0 auto;
+                position: relative;
+                p{
+                    margin-bottom: 25px;
+                    height:40px;
+                    line-height: 40px;
+                    label{
+                        width: 100px;
+                        display:block;
+                        text-align: right;
+                        padding-right:20px;
+                        b{
+                            margin-right: 5px;
+                            color: $ACTIVECOLOR;
+                        }
+                    }
+                    input{
+                        @include flexBox;
+                        display: block;
+                        height:40px;
+                        line-height: 40px;
+                        border: 1px $BORDER solid;
+                        text-indent:5px;
+                    }
+                    select{
+                        @include flexBox;
+                        display: block;
+                        height:40px;
+                        line-height: 40px;
+                        border: 1px $BORDER solid;
+                    }
+                }
+                input{
+                    opacity:0;
+                    position: absolute;
+                }
+                #drop_area{
+                    padding: 30px 0;
+                    background: #FFF4EE;
+                    border: 1px $ACTIVECOLOR dashed;
+                    text-align:center;
+                    line-height: 25px;
+                    cursor: pointer;
+                    .img{
+                        width: 200px;
+                        display: block;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    h3{
+                        font-size: 14px;
+                    }
+                    p{
+                        font-size: 12px;
+                        color: #acacac;
+                    }
+                    span{
+                        color:$ACTIVECOLOR;
+                    }
+                }
+                ul{
+                    padding-top: 30px;
+                    li{
+                        line-height: 22px;
+                        font: 12px;
+                        color: #acacac;
+                        &:nth-child(1){
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+        .btnBox{
+            padding: 20px 0;
+            &>div{
+                width:80%;
+                max-width: 400px;
+                margin:0 auto;
+                a{
+                    float: left;
+                    max-width: 150px;
+                    width: 40%;
+                    line-height: 40px;
+                    height: 40px;
+                    text-align: center;
+                    color: #4b4b4b;
+                    border: 1px $BORDER solid;
+                    border-radius: 4px;
+                    display: block;
+                    &:nth-child(2){
+                        float:right;
+                        background: $ACTIVECOLOR;
+                        color: $WHITE;
+                    }
+                }
+            }
+        }
+    }
+}

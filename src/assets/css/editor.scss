@@ -1,0 +1,41 @@
+.editBox{
+    margin-top: 200px;
+}
+.edit{
+    width: 800px;
+    height: 300px;
+    background: #ffffff;
+    border: 1px #f1f1f1 solid;
+    margin: 0 auto;
+    padding: 10px 5px;
+    div{
+        line-height: 40px;
+        span{
+            display:inline-block;
+        }
+    }
+    textarea{
+        border: 0;
+        border-bottom: 1px #ccc solid;
+        height:20px !important;
+        position:relative;
+        top:5px;
+        margin:0 5px;
+        position:relative;
+        resize:horizontal;
+        white-space:nowrap;
+    }
+
+}
+.btnBox{
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+$URL:'https://www.baidu.com/img/';
+
+.tpl{
+    margin-top: 100px;
+    background: url($URL+'bd_logo1.png') no-repeat;
+}

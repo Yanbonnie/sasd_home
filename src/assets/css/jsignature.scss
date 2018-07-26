@@ -1,0 +1,180 @@
+.jSignatureBox{
+    position: relative;
+    .signBox{
+        padding-right: 200px;
+    }
+    .formBox{
+        margin-right: 200px;
+        margin-top: 30px;
+        // background: #f1f1f1;
+        .item{
+            display: flex;
+            height: 60px;
+            align-items: center;
+            padding-right: 20px;
+            label{
+                flex-basis: 150px;
+                text-align: center;
+            }
+            input{
+                display: block;
+                flex-grow: 1;
+                display: block;
+                border: 1px #dedede solid;
+                line-height: 40px;
+                text-indent: 10px;
+            }
+            .slideBox{
+                display: block;
+                background: #f1f1f1;
+                position: relative;
+                height: 10px;
+                border-radius: 50px;
+                width: 400px;
+                cursor: pointer;
+                .slider{
+                    width: 15px;
+                    height: 15px;
+                    background: #3eb94e;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: 192.5px;
+                    top: -3px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .canvasBox{
+        width:160px;
+        padding: 20px;
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background: #fff;
+        box-shadow: 2px 2px 5px #ccc;
+        background: #fff;
+        z-index: 2;
+        .btnBox{
+            display:flex;
+            margin-top: 10px;
+            justify-content: space-between;
+            a{
+                width: 70px;
+                background: $ACTIVECOLOR;
+                color: #fff;
+                border-radius: 4px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                margin-bottom: 0;
+                &:first-child{
+                    background: #f1f1f1;
+                    color: #4a4a4a;
+                }
+            }
+        }
+        input{
+            display: block;
+            border: 1px #dedede solid;
+            width: 100%;
+            height: 30px;
+            text-indent: 10px;
+            flex-grow: 1;
+            border-radius: 4px;
+        }
+        a{
+            
+            
+        }
+    }
+    #signature{
+        background: #fff;
+        width: 100%;
+        height: 400px;
+        position: relative;
+        // background:#f3f3f3;
+        background: url($URL+'signtxt.png') no-repeat center center  #f3f3f3;
+        margin-top: 30px;
+        // transform:scale(0.5,0.5);
+        // zoom:0.5;
+    }
+    .btn-box{
+        position: absolute;
+        right: 0;
+        top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        a{
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            margin-bottom: 20px;
+            display: block;
+            position: relative;
+            cursor: pointer;
+    
+            &.black{
+                background: #000;
+            }
+            &.blue{
+                background: #0030ff;
+            }
+            &.red{
+                background: #ff503f;
+            }
+            &.active:before{
+                position: absolute;
+                width: 58px;
+                content: '.';
+                font-size: 0;
+                // border: 2px #000 solid;
+                box-shadow: 0px 0px 5px #ff503f;
+                // background: #fff;
+                border-radius: 100%;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                height: 58px;
+            }
+            &.save{
+                background: #f1f1f1;
+                text-align: center;
+                line-height: 50px;
+                color: green;
+                box-shadow: 1px 2px 5px #ccc;
+            }
+            &.reset{
+                background: #f1f1f1;
+                text-align: center;
+                line-height: 50px;
+                color: #4a4a4a;
+                box-shadow: 1px 2px 5px #ccc;
+            }
+            &.autowrite{
+                line-height: 15px;
+                box-shadow: 1px 2px 5px #ccc;
+                text-align: center;
+                background: #f1f1f1;
+                color: #ff503f;
+                b{
+                    position: relative;
+                    top: 10px;
+                }
+            }
+        }
+    
+    }
+    #someelement{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        background: #fff;
+    }
+}

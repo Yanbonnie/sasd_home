@@ -1,0 +1,131 @@
+/* Scss Document */
+html{font-family:"Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;font-size:14px;}
+html,body,div,object,iframe,applet,object,h1,h2,h3,h4,h5,h6,p,blockquote,pre,address,dl,dt,dd,ol,ul,li,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,menu,nav,output,ruby,section,summary,time,mark,audio,video,progress{margin:0;padding:0;border:0;vertical-align:baseline;font-family:"Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "宋体", sans-serif;}
+li{list-style:none}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
+audio,canvas,progress,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+[hidden],template{display:none}
+a{background-color:transparent;text-decoration:none}
+a:active,a:hover{outline:0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+h1{font-size:2em;margin:.67em 0}
+mark{background:#ff0;color:#000}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-0.5em}
+sub{bottom:-0.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:1em 40px}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+pre{overflow:auto}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;outline:none;line-height:normal}
+button{overflow:visible}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+input{line-height:normal}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}
+input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+textarea{overflow:auto}
+optgroup{font-weight:bold}
+table{border-collapse:collapse;border-spacing:0}
+td,th{padding:0}
+*{padding:0;margin:0;font-size:14px}
+a:focus{outline-style:none !important; -moz-outline-style: none !important; }
+html,body,#app{width:100%; margin:0;padding:0;min-height: 100%;height: 100%;}
+#app{height: 100%;}
+html{height: 100%;}
+body{position: relative; min-width: 1000px;} 
+//公共样式
+.clf:before, .clf:after {content:"";display:table;}
+.clf:after{clear:both;}
+.clf{*zoom:1;}
+.shengl{word-break:keep-all;/* 不换行 */white-space:nowrap;/* 不换行 */overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */text-overflow:ellipsis;}
+.opacity{opacity: 0;}
+
+@mixin overhidden {
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;
+    word-break:keep-all;/* 不换行 */
+    white-space:nowrap;/* 不换行 */
+    overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+    text-overflow:ellipsis;
+  }
+// @mixin flexBox{
+//   display: -webkit-flex; 
+//   display: flex;	
+//   /* for uc */
+//   display: -webkit-box; 
+//   display: -ms-flexbox; /* TWEENER - IE 10 */
+// }
+@mixin box{
+    display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -webkit-box;   /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+}
+@mixin flexBox{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;        /* Chrome */  
+  -ms-flex: 1;            /* IE 10 */  
+  flex: 1;                /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-flex: 1;    /* OLD - iOS 6-, Safari 3.1-6 */  
+  -moz-box-flex: 1;       /* OLD - Firefox 19- */  
+}
+//全局变量
+$URL:"../images/";//url路径前缀
+$FONTCOLOR:      #626965;    //文字颜色
+$COLOR91:        #919191;
+$COLOR5F:        #5F696C;
+$FONTGRAY:       rgba(0,0,0,0.5);
+$BLACK:          #0a0909;    //黑色
+$BGCOLOR:        #ffffff;    //背景颜色
+$WHITE:          #ffffff;
+$BGGRAY:         #f5f5f5;    //灰色背景
+$QGRAY:          #D3D6DE;    //浅灰
+$PINK:           #FF503F;
+$OPACITYPINK:    rgba(255,86,63,0.5);
+$GREEN:          #5FB336;
+$BORDER:         #edeef0;
+$BORDERS:        #dedede;
+$LBORDER:        #dadada;
+$BLUE:           #3385ff;
+$FONT14:14px;
+$FONT16:16px;
+$FONT12:12px;
+$WIDTH:98%;
+
+
+//可自定义颜色
+// 主题一
+$ACTIVECOLOR:    #ff563f ;   //active颜色
+$ACTIVECOLOR5:    rgba(255,80,63,0.5);
+$ACTIVECOLOR1:rgba(255,80,63,0.05);
+$ACTIVECOLOR01:rgba(255,80,63,0.01);
+$ACTIVECOLOR10:#e54637;
+$PINK:#FFD7D1;
+$QPINK:#FFFCFA;;
+
+//主题二
+// $ACTIVECOLOR:    #55BEED;   //active颜色
+// $ACTIVECOLOR5:rgba(85,190,237,0.5);
+// $ACTIVECOLOR1:rgba(85,190,237,0.1);
+// $ACTIVECOLOR01:rgba(85,190,237,0.01);
+// $ACTIVECOLOR10:#4dacd6;
+
+
+
+

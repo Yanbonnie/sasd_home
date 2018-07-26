@@ -1,0 +1,139 @@
+
+.tree{
+	width: 100%;
+	background: #fff;
+}
+/*变量*/
+$URL:'../images/tree/';
+$BORDER:         #edeef0;
+$ACTIVECOLOR:    #ff563f ;   //active颜色
+
+.treeview, .treeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.treeview li{
+	position: relative;	
+	.item{  //一级
+		line-height: 35px;
+		display: block;
+		padding-left: 12px;
+		position: relative;				
+		text-align: left;
+		padding-bottom: 10px;
+		span{
+			position: relative;
+			width: 250px;
+			border: 1px $BORDER solid;
+			height: 35px;
+			line-height: 33px;
+			display: block;
+			margin-bottom: 5px;
+			padding-left: 10px;
+			border-radius: 50px;
+			-ms-border-radius:50px;
+			cursor: pointer;
+			word-break:keep-all;/* 不换行 */
+			white-space:nowrap;/* 不换行 */
+			overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+			text-overflow:ellipsis;	
+			padding-right: 50px;
+			&.disable{
+				color: #dedede;
+				&:hover{
+					// background: $ACTIVECOLOR;
+					color: #dedede;
+				}
+			}
+			&:hover{
+				// background: $ACTIVECOLOR;
+				color: #3385ff;
+			}
+			&.active{
+				background: $ACTIVECOLOR;
+				color: #fff;
+			}
+		}
+		b{
+			position: absolute;
+			right: 10px;
+			font-weight: normal;
+
+		}
+	}
+	ul li{  //二级
+		&::before{
+			border: 1px $BORDER dashed;
+			content: '.';
+			font-size: 0;
+			position: absolute;
+			height: 100%;
+			width:2px;
+			left: 25px;
+			top: 0;
+			z-index: 40;
+		}
+		.item{
+			&::before{
+				border: 1px $BORDER dashed;
+				position: absolute;
+				content: '.';
+				font-size:0;
+				width: 23px;
+				height:2px;
+				top: 18px;
+				left: 30px;
+			}
+			padding-left: 55px;
+		}	
+		ul li{  //三级
+			&::before{
+				left: 65px;
+			}
+			.item{
+				&::before{
+					left: 70px;
+				}
+				padding-left: 95px;
+				&.folder,&.folderClose,&.folderNoPen,&.folderNo { 
+					background-position: 90px 3px;
+				}
+			}		
+			ul li{  //四级
+				&::before{
+					left: 105px;
+				}
+				.item{
+					&::before{
+						left: 110px;
+					}
+					padding-left: 135px;
+					&.folder,&.folderClose,&.folderNoPen,&.folderNo{
+						background-position: 130px 3px;
+					}
+				}	
+				ul li{  //五级
+					&::before{
+						left: 145px;
+					}
+					.item{
+						&::before{
+							left: 150px;
+						}
+						padding-left: 175px;
+						&.folder,&.folderClose,&.folderNoPen,&.folderNo{
+							background-position: 170px 3px;
+						}
+					}		
+				}	
+			}
+		}	
+	}
+} 
+
+.treeview li.lastCollapsable{ 
+	&::before{
+		height: 20px;
+	}
+} 

@@ -1,0 +1,415 @@
+@import 'base.scss';
+.sign{
+    padding-top: 75px;
+    margin: 0 auto;
+    nav{
+        margin-bottom: 10px;
+    }
+    .signBox{
+        .sideLeft{
+            border: 1px $BORDER solid;
+            // width: 340px;
+            width: 30%;
+            max-width: 340px;
+            margin-right: 10px;
+            position: relative;
+            .tip{
+                line-height: 30px;
+                padding: 10px;
+                color: #acacac;
+            }
+            h3{
+                text-align: center;
+                height: 46px;
+                line-height: 46px;
+                border-bottom: 1px $BORDER solid;
+                cursor: pointer;
+                span{
+                    margin-right: 5px;
+                }
+                i{
+                    display:inline-block;
+                    transform: scale(0.8);
+                    &:before{
+                        font-size: 12px;
+                        
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .selectBox{
+                position: absolute;
+                width: 80%;
+                left: 10%;
+                background: #fff;
+                border-radius: 5px;
+                box-shadow: 5px 5px 10px 5px #d6d7dd;
+                padding: 10px 0;
+                z-index: 2;
+                li{
+                    width: 100%;
+                    margin: 0 auto;
+                    line-height: 35px;
+                    cursor: pointer;
+                    padding:0 10px;
+                    &:hover{
+                        background: #f6f7fd;
+                    }
+                }
+            }
+            .preview{
+                width: 340px;
+                height: 150px;
+                text-align: center;
+                /*垂直居中*/
+                display: table-cell;
+                vertical-align: middle;
+                cursor: pointer;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    box-sizing: border-box;
+                    margin: 0 auto;
+                    padding: 10px;
+                    display: block;
+                }
+            }
+            .sealList{
+                ul{
+                    width: 90%;
+                    margin: 0 auto;
+                }
+                li{
+                    width: 29.5%;
+                    height: 60px;
+                    float: left;
+                    text-align: center;
+                    margin: 5px 1.5%;
+                    /*垂直居中*/
+                    display: table-cell;
+                    vertical-align: middle;
+                    border: 1px $BORDER solid;
+                    cursor: pointer;
+                    &:hover,&.active{
+                        border: 1px $ACTIVECOLOR solid;
+                    }
+                    img{
+                        max-width: 100%;
+                        max-height: 100%;
+                        box-sizing: border-box;
+                        margin: 0 auto;
+                        padding: 10px;
+                    }
+                }
+            }
+            .sealPageList{
+                height: 400px;
+                overflow-y: auto;
+                ul{
+                    border-top: 1px $BORDER solid;
+                }
+                li{
+                    display: block;
+                    line-height: 50px;
+                    border-bottom: 1px $BORDER solid;
+                    padding-left: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    &:hover{
+                        color: $ACTIVECOLOR;
+                        i{
+                            display: block;
+                            color: #acacac;
+                        }
+                    }
+                    span{
+                        display: block;
+                        &:nth-child(1){
+                            width: 50px;
+                            height: 50px;
+                            position: relative;
+                            float: left;
+                            margin-right: 10px;
+                            // text-align: center;
+                            // /*垂直居中*/
+                            // display: table-cell;
+                            // vertical-align: middle;
+                            img{
+                                max-width: 80%;
+                                max-height: 80%;
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+
+                                // margin: 0 auto;
+                            }
+                        }
+                    }
+                    i{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        padding: 0 20px;
+                        line-height: 50px;
+                        display: none;
+                        color: #acacac;
+                        &:hover{
+                            color: $ACTIVECOLOR;
+                        }
+                    }
+                }                
+            }
+        }
+        .sideRight{
+            min-width: 800px;
+            @include flexBox;
+            border: 1px $BORDER solid;
+            overflow: hidden;
+            #signBtn{
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                -ms-border-radius:100%;
+                position: fixed;
+                right: 14%;
+                bottom: 80px;
+                background: $ACTIVECOLOR;
+                text-align: center;
+                line-height: 50px;
+                color: $WHITE;
+                box-shadow: 0 10px 20px 0 $ACTIVECOLOR5;
+                z-index: 11;
+            }
+        }
+    }
+    .signGuild{
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background: rgba(0,0,0,0.8);
+        .contain{
+            height: 100%;
+            margin: 0 auto;
+            .sideLeft{
+                // border: 1px $BORDER solid;
+                width: 340px;
+                margin-right: 10px;
+                position: relative;
+                .guide_1{
+                    position: absolute;
+                    left: 0;
+                    top: 106px;
+                }
+                .guide_2{
+                    position: absolute;
+                    left: 0;
+                    top: 106px;
+                }
+            }
+            .sideRight{
+                position: relative;
+                @include flexBox;
+                .guide_2{
+                    border: 2px $ACTIVECOLOR dashed;
+                    // height: calc(100% - 100px);
+                    position: absolute;
+                    width: 100%;
+                    top: 106px;
+                    // height: 80%;
+                    bottom: 55px;
+                    display: block;
+                }
+                .guide_3{
+                    position: absolute;
+                    bottom: 120px;
+                    right: 15%;
+                }
+            }
+        }
+    }
+    /*pin码弹框*/
+    .pinDialog{
+        .alert-body{
+            input{
+                width: 80%;
+                height: 40px;
+                line-height: 40px;
+                border: 1px $BORDER solid;
+                text-indent: 10px;
+            }
+            .warn{
+                width: 80%;
+                text-align: left;
+                line-height: 40px;
+                color: $ACTIVECOLOR;
+                margin: 0 auto;
+            }
+        }
+    }
+    /*二维码弹框*/
+    .ewmCover{
+        h3{
+            text-align: center;
+        }
+        .ewmBox{
+            width: 100%;
+            position: relative;
+            img{
+                width: 200px;
+                height: 200px;
+            }
+            .refush{
+                position: absolute;
+                width:200px;
+                height: 200px;
+                top: 0;
+                left: 50%;
+                margin-left: -100px;
+                background: rgba(0,0,0,0.8);
+                text-align: center;
+                a{
+                    width: 60%;
+                    height: 35px;
+                    line-height: 35px;
+                    background: rgba(255,255,255,0.8);
+                    display: block;
+                    border-radius: 50px;
+                    margin: 0 auto;
+                    margin-top: 80px;
+                    color: #000;
+                    font-size: 16px;
+                    &.icon-i-refresh:before{
+                        padding-right:5px;
+                    }
+                }
+                p{
+                    color: #fff;
+                    line-height:20px;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+    #myCanvas2{
+        bottom: 0 !important;
+        top: static;
+    }
+}
+
+/*beforesign*/
+.sealImg2{
+    background: #f1f1f1;
+    border: 1px #acacac dashed !important;
+    .txt{
+        position: absolute;
+        top: 20px;
+        text-align: center;
+        display: block;
+        font-size: 12px;
+        width: 100%;
+    }
+    .name{
+        position: absolute;
+        bottom: 0;
+        display: block;
+        font-size: 12px;
+        width: 100%;
+    }
+}
+.appointBox{
+    margin-top: 20px;
+    position: relative;
+    h3{
+        border-bottom: 0px !important;
+        text-align: left !important;
+        padding-left: 5%;
+        line-height: 30px !important;
+        height: 30px !important;
+    }
+    .signers{
+        color: #4a4a4a;
+        line-height: 40px;
+        padding-left: 5%;
+        position: relative;
+        .icon-help{
+            &:hover{
+                .warnTip{
+                    display: block;
+                }
+            }
+        }
+        .warnTip{
+            display: none;
+            width: 60%;
+            position: absolute;
+            top: 40px;
+            padding:10px 5px;
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            border-radius: 8px;
+            z-index: 11;
+            line-height: 20px;
+
+        }
+    }
+    .selected{
+        width: 85%;
+        margin: 0 auto;
+        border: 1px $BORDER solid;
+        height: 40px;
+        line-height: 40px;
+        position: relative;
+        padding-left: 5%;
+        cursor: pointer;
+        &:hover{
+            border: 1px $ACTIVECOLOR solid;
+        }
+        i{
+            font-size: 12px;
+            transform: rotate(-90deg);
+            display: inline-block;
+            position: absolute;
+            right: 10px;
+        }
+        
+    }
+    ul{
+        position: absolute;
+        top: 110px;
+        left: 0%;
+        width: 90%;
+        margin:5px 15px;
+        background: #fff;
+        border: 1px $BORDER solid;
+        max-height:200px;
+        overflow: auto;
+        z-index: 10;
+        li{
+            line-height: 40px;
+            height: 40px;
+            padding-left: 10px;
+            cursor: pointer;
+            &:hover{
+                background: #fffbea;
+            }
+        }
+    }
+    .signOppoint{
+        width: 90%;
+        margin: 10px auto;
+        padding: 15px 0;
+        position: relative;
+        cursor: pointer;
+        &:hover{
+            background: #f5f5f5;
+        }
+        i{
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+        
+    }
+}

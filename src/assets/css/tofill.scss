@@ -1,0 +1,625 @@
+/*toFill*/
+.toFill{
+    padding-bottom: 100px;
+    .signFile{
+        #file{
+            opacity: 0.01;
+        }
+        .dashed{
+            width: 100%;
+            margin: 0px auto 0;
+            background: $ACTIVECOLOR01;
+            border: 1px $ACTIVECOLOR5 dashed;
+            text-align: center;
+            padding: 25px 0 15px;
+            .iconP{
+                padding-bottom: 10px;
+            }
+            .icon-success{
+                font-size: 50px;
+                color: $ACTIVECOLOR;
+
+            }
+            .icon-warn{
+                font-size: 50px;
+                color: $ACTIVECOLOR;
+            }
+            .title{
+                font-size: $FONT14;
+                color: $BLACK;
+                font-weight: bold;
+                span{
+                    padding-right: 10px;
+                }
+                a{
+                    font-size: $FONT14;
+                    color: $ACTIVECOLOR;
+                    border-bottom: 1px $ACTIVECOLOR solid;
+                }
+            }
+            .tip{
+                line-height: 50px;
+                color: $COLOR91;
+                i{
+                    margin-right: 10px;
+                    font-size: 18px;
+                    cursor: pointer;
+                }
+                a{
+                    color: $ACTIVECOLOR;
+                }
+            }
+        }
+    }
+    .setting{
+        padding-top: 30px;
+        border-bottom: 1px #ccc solid;
+        .item{
+            margin-bottom: 25px;
+            label{
+                // display: flex;
+                width: 100px;
+                line-height: 36px;
+                height: 36px;
+                display: block;
+            }
+            .sideRight{
+                // display: flex;
+                @include flexBox;
+                .title{
+                    width: 100%;
+                    height: 36px;
+                    line-height: 36px;
+                    border: 1px $BORDER solid;
+                    text-indent: 10px;
+                    background: #FDFDFD;;
+                }
+                .calendarBox{
+                    width: 200px;
+                    position: relative;
+                    height: 36px;
+                    line-height: 36px;
+                    display: block;
+                    float: left;
+                    padding: 0;
+                    input{
+                        width: 100%;
+                        text-indent: 10px;
+                        line-height: 36px;
+                        height: 36px;
+                        border: 1px $BORDER solid;
+                    }
+                    .add-on{
+                        position: absolute;
+                        top: 3px;
+                        right:5px;
+                        i{
+                            color: $COLOR91;
+                        }
+                    }
+                }
+                .time{                   
+                    color: $COLOR91;
+                    line-height: 36px;
+                    padding-left:30px;
+                    i{
+                        margin-right: 10px;
+                        font-size: 20px;
+                        line-height: 36px;
+                    }
+                    .icon-solid_check{
+                        color: $ACTIVECOLOR;
+                    }
+                    b{
+                        line-height: 34px;
+                        font-weight: normal;
+                        color: $BLACK;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+                ul{
+                    li{
+                        line-height: 36px;
+                        max-width: 350px;
+                        float: left; 
+                        display: inline-block;
+                        margin-right: 30px;
+                        a{
+                            display: block;
+                        }
+                        i{
+                            color: $ACTIVECOLOR;
+                            font-size: 20px;
+                            position: relative;
+                            top: 2px;
+                            margin-right: 5px;
+                            &.icon-circle{
+                            }
+                        }
+                    }
+                }
+            }
+            .selectList{
+                display: flex;
+                @include flexBox;
+                ul{
+                    width: 100%;                    
+                    li{
+                        width: 100%;
+                        float: none;
+                        height: 50px;
+                        line-height: 50px;
+                        border-left: 4px $ACTIVECOLOR solid;
+                        margin: 5px auto 5px 0;
+                        padding-left: 20px;
+                        width:100%;
+                        position: relative;
+                        // cursor: pointer;
+                        span{
+                            display: flex;
+                            text-align: center;
+                            -webkit-user-select:none;                        
+                            -moz-user-select:none;                    
+                            -ms-user-select:none;                    
+                            user-select:none;
+                            height: 50px;
+                            display:block;
+                            &:nth-child(1){
+                                width: 50px;
+                                b{
+                                    color: #cdc2cd;
+                                }
+                            }
+                            &:nth-child(2){
+                                width: 50px;
+                            }
+                            &:nth-child(3){
+                                width:50px;
+                            }
+                            &:nth-child(4){
+                                width:150px;
+                            }
+                            &:nth-child(5){
+                                @include flexBox;
+                                padding-right: 35px;
+                            }
+                            
+                        }
+                        i{
+                            position: absolute;
+                            right: 20px;
+                            top: 0;
+                            line-height: 50px;
+                            color: #4b4b4b;
+                            cursor: pointer;
+                            display: none;
+                            &:hover{
+                                color:$ACTIVECOLOR;
+                            }
+                        }
+                        &:hover{
+                            box-shadow:0 0 5px #ccc;
+                            -ms-box-shadow:0 0 5px #ccc;
+                            i{
+                                display: block;
+                            }
+                        }
+                        &.sortable-ghost{
+                            background: rgba(255, 244, 238, 0.8);
+                            cursor: move;
+                        }
+                        &.addSignBtn{
+                            height: 36px;
+                            line-height: 36px;
+                            border-left: 4px $WHITE solid;
+                            padding-left: 0;
+                            margin: 0;
+                            i{
+                                position: relative;
+                                display: block;
+                                float: left;
+                                line-height: 36px;
+                                margin-left: 10px;
+                                right: 10px;
+                                color: $ACTIVECOLOR;
+                            }
+                            &:hover{
+                                box-shadow:0 0 0px #ccc;
+                                -ms-box-shadow:0 0 0px #ccc;
+                                a{
+                                    color: $ACTIVECOLOR;
+                                }
+                            }
+                        }
+                    }
+                    &.noOrderSign{
+                        li{
+                            span{
+                                &:nth-child(1){
+                                    width: 50px;
+                                }
+                                &:nth-child(2){
+                                    width: 150px;
+                                    text-align: left;
+                                }
+                                &:nth-child(3){
+                                    padding-left: 20px;
+                                    padding-right: 50px;
+                                    @include flexBox;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                    &.orderSign{
+                        li{
+                            cursor: move;
+                        }
+                    }
+                }
+            }
+            .btnBox{
+                a{
+                    display: block;
+                    margin-bottom: 5px;
+                    color: $BLACK;
+                    line-height: 36px;
+                    i{
+                        margin-right: 5px;
+                        color:$PINK;
+                    }
+                }
+                &.operBox{
+                    span{
+                        padding-left: 5px;
+                        margin-right: 20px;
+                        color: #626965;
+                        cursor: pointer;
+                        i{
+                            color: $COLOR91;
+                            margin-right: 10px;
+                            font-size: 18px;
+                            position: relative;
+                            top: 2px;
+                            &.active{
+                                color: $ACTIVECOLOR;
+                            }
+                        }
+                    }
+                }
+            }
+            .cstxt{
+                line-height: 36px;
+                color: $COLOR91;
+                cursor: pointer;
+                i{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .bottomBox{
+        padding: 15px 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        right:0;
+        background: rgba(0,0,0,0.8);
+        &>div{
+            width: 380px;
+            margin: 0 auto;
+            a{
+                float: left;
+                display: block;
+                width: 150px;
+                height: 36px;
+                line-height: 36px;
+                border: 1px #ccc solid;
+                border-radius: 4px;
+                -ms-border-radius:4px;
+                text-align: center;
+                color: #000;
+                background: #fff;
+                &:nth-child(2){
+                    float: right;
+                    background: $ACTIVECOLOR;
+                    color: $WHITE;
+                    border: 1PX $ACTIVECOLOR;
+                }
+            }
+        }
+    }
+    /*添加联系人弹框*/
+    .mailListBox{
+        $BGACTIVE:#fffbea;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 20;
+        .mailContent{
+            width: 800px;
+            height: 600px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            margin-top: -300px;
+            background: $WHITE;
+            border-radius: 4px;
+            -ms-border-radius:4px;
+            .mailHeader{
+                padding: 0 0 0 2.5%;
+                line-height: 50px;
+                height: 50px;
+                font-weight: normal;
+                font-size: $FONT16;
+                border-bottom: 1px $BORDER solid;
+                display:flex;
+                align-items: center;
+                position: relative;
+                span{
+                    &:nth-child(1){
+                        flex-grow: 1;
+                    }
+                    &:nth-child(2){
+                        flex-basis: 150px;
+                        text-align: center;
+                        color: $ACTIVECOLOR;
+                        height: 32px;
+                        line-height: 32px;
+                        border-left: 1px $BORDER  solid;
+                        cursor: pointer;
+                        i{
+                            margin-right: 5px;
+                            font-size: 19px;
+                        }
+                        b{
+                            position: relative;
+                            top: -2px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+                .createContact{
+                    width: 400px;
+                    background: $WHITE;
+                    position: absolute;
+                    right: 40px;
+                    top: 60px;
+                    // padding: 20px 50px !important;
+                    border-radius: 12px;
+                    -ms-border-radius:12px;
+                    box-shadow: 0 0 20px 0 rgba(39,65,116,0.50);
+                    z-index: 2;
+                    .formBox{
+                        padding: 40px;
+                    }
+                    p{
+                        padding: 0;
+                        margin: 0;
+                        line-height: 40px;
+                        padding-bottom: 20px;
+                        input{
+                            border: 1px $BORDER solid;
+                            height: 40px;
+                            line-height: 40px;
+                            width: 100%;
+                            text-indent: 10px;
+                            box-sizing: border-box;
+                        }
+                    }
+                    .btnBox{
+                        padding-top: 10px;
+                        a{
+                            width: 145px;
+                            height: 40px;
+                            line-height: 40px;
+                            text-align: center;
+                            box-sizing: border-box;
+                            float: left;
+                            background: #e6e6e6;
+                            color: #4b4b4b;
+                            border-radius: 4px;
+                            -ms-border-radius:4px;
+                            &:nth-child(2){
+                                float: right;
+                                background: $ACTIVECOLOR;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    .icon-triggle{
+                        position: absolute;
+                        top: -20px;
+                        right: 20px;
+                        width: 0;
+                        height: 0;
+                        border: 10px solid transparent;
+                        border-bottom: 10px solid #fff;
+                    }
+                }
+            }
+            .mailBody{
+                margin-top: 2.5%;
+                padding: 2.5%;
+                .sideLeft{
+                    width:250px;
+                    float: left;
+                    border: 1px $BORDER solid;
+                    height: 420px;
+                    h3{
+                        height: 40px;
+                        line-height: 40px;
+                        border-bottom: 1px $BORDER solid;
+                        padding-left: 25px;
+                        font-weight: normal;
+                    }
+                    .sideLeftBox{
+                        height: 380px;
+                        overflow-x:hidden;
+                        overflow-y:auto;
+                        padding-top: 10px;
+                        li{
+                            strong{
+                                padding-right: 10px;
+                                &.shengl:hover{
+                                    // background: $BGACTIVE;
+                                    color: $ACTIVECOLOR;
+                                }
+                                &.active{
+                                    // background: $BGACTIVE;
+                                }
+                            }
+                        }
+                    }
+                }
+                .sideRight{
+                    width: 490px;
+                    float: right;
+                    border: 1PX $BORDER solid;
+                    float: right;
+                    height: 420px;
+                    .panel-box{
+                        .table{
+                            border: 0;
+                        }
+                        .signTable{
+                            .page-num{
+                                display: none;
+                            }
+                        }
+                    }
+                    li{
+                        height: 40px;
+                        line-height: 40px;
+                        padding-left: 0;
+                        &.title{
+                            background: #f7f7f7;
+                            // border-bottom: 1px $BORDER solid;
+                            border: 0;
+                            span{
+                                &:nth-child(3){
+                                    color: #000;
+                                }
+                            }
+                        }
+                        .item{
+                            cursor: pointer;
+                            &:hover{
+                                // background: $BGACTIVE;
+                            }
+                            display: flex;
+                            width: 100%;
+                            overflow: hidden;
+                        }
+                        span{
+                            @include overhidden;
+                            &:nth-child(1){
+                                // width: 80px;
+                                flex-basis: 80px;
+                                display: block;
+                                // float: left;
+                                text-align: center;
+                                color: $QGRAY;
+                                cursor: pointer;
+                                &.icon-checkbox_solid{
+                                    color: $ACTIVECOLOR;
+                                }
+                            }
+                            &:nth-child(2){
+                                display: block;
+                                flex-basis: 200px;
+                            }
+                            &:nth-child(3){
+                                flex-basis: 200px;
+                                color: $COLOR91;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }    
+            .mailFooter{
+                padding-top: 5px;
+                display: flex;
+                width: 440px;
+                margin: 0 auto;
+                justify-content: space-between;
+                a{
+                    flex-basis: 200px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 4px;
+                    &:nth-child(1){
+                        border: 1px $BORDER  solid;                        
+                    }
+                    &:nth-child(2){
+                        border: 1px $ACTIVECOLOR solid;
+                        background: $ACTIVECOLOR;
+                        color: $WHITE;
+                    }
+                }
+            }        
+        }
+    }
+    /*创建签署人*/
+    .createSign{
+        p{
+            margin-bottom: 15px; 
+            &:last-child{
+                margin-bottom: 0;
+            }          
+            input{
+                width: 100%;
+                display: block;
+                border: 0;
+                height: 40px;
+                line-height: 40px;
+                text-indent: 10px;
+                border-radius: 4px;
+                -ms-border-radius:4px;
+                overflow: hidden;
+                border: 1px $BORDER solid;
+                &:focus{
+                    border: 1px $ACTIVECOLOR solid;
+                }
+            }
+        }
+    }
+    //发起文档成功
+    .successFill{
+        .alert-model{
+            width: 400px !important;
+        }
+        .alert-content{
+            width: 80%;
+            margin: 0 auto;
+        }
+        p{
+            font-size: 14px;
+            line-height: 30px;
+            a{
+                color: $ACTIVECOLOR;
+                font-size: 14px;
+                border-bottom: 1px $ACTIVECOLOR solid;
+                margin: 0 5px;
+            }
+        }
+        .txt1{
+            background: #f7f7f7;    
+            margin-bottom: 10px;
+            line-height: 40px;   
+            font-size: 16px;     
+            b{
+                margin-right: 5px;
+                color: $ACTIVECOLOR;
+            }
+        }
+    }
+
+}
