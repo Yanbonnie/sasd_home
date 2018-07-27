@@ -155,5 +155,9 @@ const URL = {
     ajaxGetSignStampsWithoutDocChecked:vision+'doc/document/ajaxGetSignStampsWithoutDocChecked',    //先签后发起获取印章
 
 
+    //在线验签
+    verify:vision+'doc/docVerify/verify',                                             //验签接口
+
+
 }
 export default URL;

@@ -12,6 +12,7 @@ const Sweet = resolve => require(['@/components/sweet'], resolve)               
 const WelcomeHeader = resolve => require(['@/components/page/welcome/header'], resolve)                   //欢迎页公共页面
 const WelcomeIndex = resolve => require(['@/components/page/welcome/index'], resolve)                     //欢迎页首页
 const insSign = resolve => require(['@/components/page/welcome/inspectionSign'], resolve)                 //在线验签页
+const SignResult = resolve => require(['@/components/page/welcome/signState'], resolve)                   //在线验签结果
 //首页
 const IndexCom = resolve => require(['@/components/page/index/index'], resolve)                          //首页
 
@@ -107,6 +108,14 @@ let router = new Router({
           path:'insign',
           name:'insSign',
           component:insSign,
+          meta:{
+            step:2
+          }
+        },
+        {
+          path:'signresult',
+          name:'SignResult',
+          component:SignResult,
           meta:{
             step:2
           }

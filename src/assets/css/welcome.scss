@@ -401,3 +401,124 @@
         }
     }
 }
+.inspectionSign{
+    padding-top: 100px;
+    .signFile{
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        h3{
+            font-size: 20px;
+            font-weight: normal;
+            text-align: center;
+            line-height: 50px;
+            padding-bottom: 30px;
+        }
+        .dashed{
+            width: 100%;
+            margin: 0px auto 0;
+            background: $ACTIVECOLOR01;
+            border: 1px $ACTIVECOLOR5 dashed;
+            text-align: center;
+            padding: 40px 0 40px;
+            img{
+                display: block;
+                margin: 0 auto;
+            }
+            .tip{
+                padding-top: 30px;
+                color: $COLOR91;
+            }
+            .sweet{
+                padding-top: 10px;
+                color: $ACTIVECOLOR;
+            }
+        }
+        
+    }
+    
+}
+.signState{
+    padding-top:120px;
+    .result{
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+        border: 1px $BORDER solid;
+        padding-bottom: 50px;
+        h3{
+            padding-left: 20px;
+            font-weight: normal;        
+            line-height: 50px;
+            font-size: 16px;
+            background: #f9f9f9;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        .iconfont{
+            font-size: 80px;
+            &.icon-success{
+                color: #83c556;
+            }
+            &.icon-close-hollow{
+                color: $ACTIVECOLOR;
+            }
+        }
+        .fileName{
+            padding-bottom: 30px;
+        }
+        h4{
+            padding: 20px;
+            color: #000;
+            font-size: 16px;
+        }
+        .errorTip{
+            i{
+                font-size: 12px;
+                color: $ACTIVECOLOR;
+                margin-right: 5px;
+            }
+        }
+        .signerList{
+            border-top: 1px $BORDER solid;
+            border-bottom: 1px $BORDER solid;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .success{     
+            display: flex;       
+            &>span{
+                text-align: left;
+                padding: 10px 20px;
+                &:nth-child(1){
+                    flex-basis: 20%;
+                    display: block;
+                    white-space:normal; word-break:break-all;
+                }
+                &:nth-child(2){
+                    flex-basis: 40%;
+                    display: block;
+                    white-space:normal; word-break:break-all;
+                }
+                &:nth-child(3){
+                    flex-basis: 40%;
+                    display: block;
+                    white-space:normal; word-break:break-all;
+                }
+            }
+        }
+        .againYQ{
+            width: 150px;
+            border-radius: 4px;
+            margin-top: 30px;
+            border: 1px $ACTIVECOLOR solid;
+            text-align: center;
+            line-height: 40px;
+            display: block;
+            margin: 50px auto 0;
+            color: $ACTIVECOLOR;
+        }
+    }
+}
