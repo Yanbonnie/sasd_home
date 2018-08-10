@@ -18,22 +18,22 @@
                 <h3>让签署更轻松、更安全</h3>
                 <div class="tabContain">
                     <div>
-                        <img src="../../../assets/images/welcome/tab1.png" alt="">
+                        <img src="../../../assets/images/welcome/tab1.png" width="99" alt="">
                         <h4>灵活便捷</h4>
                         <p>支持U-Key和移动端签署<br>单独签和多人会多种应用场景</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/tab2.png" alt="">
+                        <img src="../../../assets/images/welcome/tab2.png" width="99" alt="">
                         <h4>合法合规</h4>
                         <p>获《电子认证服务许可证》CA证书，<br>完全符合《电子签名法》相关规定</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/tab3.png" alt="">
+                        <img src="../../../assets/images/welcome/tab3.png" width="99" alt="">
                         <h4>安全稳定</h4>
                         <p>通过ISO27001国际安全认证，<br>提供金融级别的全面安全保障。</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/tab4.png" alt="">
+                        <img src="../../../assets/images/welcome/tab4.png" width="99" alt="">
                         <h4>司法鉴定</h4>
                         <p>联合第三方司法鉴定机构，<br>证据实时保存，快速取证。</p>
                     </div>
@@ -52,15 +52,15 @@
                         </div>
                     </div>
                     <div class="item">
-                        <div>
-                            <img src="../../../assets/images/welcome/cj2.png" alt="">
+                        <div class="box2">
+                            <img src="../../../assets/images/welcome/cj2.png"  alt="">
                             <h4>数据存证服务</h4>
                             <p>提供电子数据的存储和<br>公证处存证功能</p>
                         </div>
                     </div>
                     <div class="item">
-                        <div>
-                            <img src="../../../assets/images/welcome/cj3.png" alt="">
+                        <div class="box3">
+                            <img src="../../../assets/images/welcome/cj3.png"  alt="">
                             <h4>合同管理系统</h4>
                             <p>合同签署、履行、变更、归档、<br>统计全过程管理</p>
                         </div>
@@ -73,32 +73,34 @@
                 <h3>技术支持和服务</h3>
                 <div class="tabContain">
                     <div>
-                        <img src="../../../assets/images/welcome/icon2.png" alt="">
+                        <img src="../../../assets/images/welcome/icon1.png" width="95" alt="">
                         <h4>身份认证服务</h4>
                         <p>真宜签与多家国家权威数字证书认证中心合作，为认证用户颁发数字证书并对证书的申请、访问、验证提供完善的管理服务</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/icon2.png" alt="">
+                        <img src="../../../assets/images/welcome/icon2.png" width="95" alt="">
                         <h4>数字证书服务</h4>
                         <p>提供个人签名、企业印章管理服务，提供认证用户使用自身数字证书的数字签名及验签服务，并支持用户文件的本地签署</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/icon3.png" alt="">
+                        <img src="../../../assets/images/welcome/icon3.png" width="95" alt="">
                         <h4>存证服务</h4>
                         <p>提供第三方平台存证，保全签署文件和签署过程数据的“原始面貌”，同时对接公证处提供公证处存证服务</p>
                     </div>
+                </div>
+                <div class="tabContain" style="padding-bottom:95px;">
                     <div>
-                        <img src="../../../assets/images/welcome/icon4.png" alt="">
+                        <img src="../../../assets/images/welcome/icon4.png" width="95" alt="">
                         <h4>时间戳服务</h4>
                         <p>提供可信时间源的时间戳签名服务，对文件的每次签署和变化加盖时间戳，证明文件在该时间的变化</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/icon5.png" alt="">
+                        <img src="../../../assets/images/welcome/icon5.png" width="95" alt="">
                         <h4>文件加密服务</h4>
                         <p>提供用户数据的高强度AES对称加密存储服务，并通过用户自身数字证书进行秘钥分发，结合硬件技术手段保证文件无法破解</p>
                     </div>
                     <div>
-                        <img src="../../../assets/images/welcome/icon6.png" alt="">
+                        <img src="../../../assets/images/welcome/icon6.png" width="95" alt="">
                         <h4>电子签名服务</h4>
                         <p>提供个人签名、企业印章管理服务，提供认证用户使用自身数字证书的数字签名及验签服务，并支持用户文件的本地签署</p>
                     </div>

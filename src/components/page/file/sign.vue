@@ -220,7 +220,6 @@
                 let SEALIMG = $(this.seal).find('.sealImg')[0]
                 let ScrollTop = SEALIMG.offsetTop + Number($(SEALIMG).attr('pagenum')-1)*this.PDFHH-150;
                 $(this.viewerContain).scrollTop(ScrollTop);  
-                console.log(this.delegateSeal.length)
                 let signList = this.accountType ? this.delegateSeal : this.sealListSmall;  //印章个数
                 if(signList.length > 1){   //签章多个  需要判断签署域有多少个-如果是一个，弹出印章选择框选择   如果是多个，关闭提示框，用户自行选择签署
                     if(this.prePositionList.length == 1 ){   //一个位置
@@ -230,11 +229,8 @@
                     if(this.prePositionList.length > 1 && !this.accountType){
                         this.stampListState = true;
                     }
-
-                    console.log("签章多个");
                 }else{   //签章只有一个
                     Array.from($(this.seal).find('.sealImg')).forEach(item=>{
-                        console.log(item)
                         $(item).click();
                     })
                 }

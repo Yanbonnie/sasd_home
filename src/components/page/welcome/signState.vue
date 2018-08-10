@@ -6,7 +6,7 @@
             <!-- <p class="fileName">验签.pdf</p> -->
             <span class="iconfont " :class="[isSuccess ? 'icon-success':'icon-close-hollow']"></span>
             <h4>{{isSuccess ? '验签成功':'验签失败'}}</h4>
-            <p class="errorTip" v-if="!isSuccess"><i class="iconfont icon-warn"></i>{{SignResult.meta.message}}</p>
+            <p class="errorTip" v-if="!isSuccess && isSuccess != -1"><i class="iconfont icon-warn"></i>{{SignResult.meta.message || ''}}</p>
             <div class="signerList" v-if="isSuccess">
                 <div class="success" v-for="(item,index) in list" :key="index">
                     <span>签署方：{{item.signCertName}}</span>
@@ -24,7 +24,7 @@
         data(){
             return{
                 SignResult:'',
-                isSuccess:null,
+                isSuccess:-1,
                 list:[]
             }
         },
@@ -48,6 +48,7 @@
         },
         mounted() {
             this.SignResult = this.getSData('inspectionSign');
+            console.log(this.SignResult)
             if(this.SignResult){
                 this.init();
             }else{

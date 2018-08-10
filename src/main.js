@@ -52,8 +52,8 @@ import Tree from './components/common/tree/index.js';
 Vue.use(Tree)
 
 //授权树形菜单
-import Dendrogram from './components/common/dendrogram/index.js';
-Vue.use(Dendrogram)
+// import Dendrogram from './components/common/dendrogram/index.js';
+// Vue.use(Dendrogram)
 
 import dragModel from './components/common/dragModel/index.js';
 Vue.use(dragModel)

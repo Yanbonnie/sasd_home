@@ -1,7 +1,7 @@
 @import 'base.scss';
 .weContain{
     width: 80%;
-    max-width: 1200px;
+    max-width: 1120px;
     margin: 0 auto;
 }
 .weHeader{
@@ -17,8 +17,8 @@
         background: #fff;
         box-shadow: 0 0 5px #ccc;
         .headerL{
-            background: url($URL+'welcome_red_logo.svg') no-repeat;
-            background-size: 100% auto;
+            background: url($URL+'welcome_red_logo.svg') no-repeat center center;
+            background-size: 116px 37px;
         }
         .headerR{
             .navRight{
@@ -47,11 +47,11 @@
         height: 66px;
     }
     .headerL{
-        flex-basis: 116px;
-        height: 37px;
+        flex-basis: 136px;
+        height: 57px;
         align-self: center;
-        background: url($URL+'welcome_white_logo.svg') no-repeat;
-        background-size: 100% auto;
+        background: url($URL+'welcome_white_logo.png') no-repeat center 5px;
+        background-size: 136px 57px;
     }
     .headerR{
         flex-grow: 1;
@@ -177,7 +177,8 @@
     }
 }
 .tab2{
-    background: #f5f5f5;
+    background: url($URL+'tab2_bg.jpg') center center;
+    background-size: auto 100%;
     h3{
         font-size: 40px;
         color: #353535;
@@ -192,9 +193,17 @@
             justify-content: space-between;
             align-items: center;
             .item{
-                flex-grow: 1;
+                width: (100/3)*1%;
+                display: flex;
+                &:nth-child(2){
+                    justify-content: center;
+                }
+                &:nth-child(3){
+                    justify-content: flex-end;
+                }
                 &>div{
-                    width: 80%;
+                    max-width: 330px;
+                    width: 90%;
                     max-width: 330px;
                     height: 372px;
                     background: #fff;
@@ -202,6 +211,7 @@
                     border-radius: 6px;
                     text-align: center;
                     padding-top: 34px;
+                    
                     h4{
                         font-size: 22px;
                         font-weight: normal;
@@ -211,6 +221,7 @@
                         color: rgba(0,0,0,0.5);
                         line-height: 24px;
                     }
+                    
                 }
             }
         }
@@ -225,14 +236,16 @@
         padding-top: 109px;
     }
     .weContain{
+        max-width: 1018px;
         .tabContain{
-            padding: 41px 0 131px;
+            padding: 41px 0 0px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
             &>div{
-                flex-basis: (100/3)*1%;
+                // flex-basis: (100/3)*1%;
+                width: 230px;
                 box-sizing: border-box;
                 background: #fff;
                 padding-top: 34px;
@@ -251,7 +264,8 @@
     }
 }
 .tab4{
-    background: #f5f5f5;
+    background: url($URL+'tab4_bg.jpg') center center;
+    background-size: auto 100%;
     h3{
         font-size: 40px;
         color: #353535;
