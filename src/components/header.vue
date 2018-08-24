@@ -3,10 +3,10 @@
         <div class="container">
             <ul class="sideLeft">
                 <li class="logo">
-                    <router-link to="/welcome/index" v-if="ThemeColor == 'red'">
+                    <router-link to="/welcome/index">
                         <!-- <img src="../assets/images/logo.png" width="116" height="37" alt=""> -->
                         <!-- <span class="iconfont icon-logo"></span> -->
-                        <span><img src="../assets/images/logo_header.png" width="80" alt=""></span>
+                        <span><img :src="Config.headerLogo" width="80" alt=""></span>
                     </router-link>
                 </li>
                 <li v-for="(item,index) in menu" :key="index">
@@ -59,7 +59,7 @@
             </div>
         </alertModel>
         <Loading text="处理中...请稍等" v-show="loadingState"></Loading>
-        <pinCom @pinSureHandle="issueHandle">真宜签</pinCom>
+        <pinCom @pinSureHandle="issueHandle">{{Config.Title}}</pinCom>
         <alertModel :type="2" v-show="exitStatus" :context="'确认退出当前用户?'" :alelrtClassWidth="'398px'" @cancelHandle="exitStatus=false" @sureHandle="exitHandle"></alertModel>
     </header>
 </template>

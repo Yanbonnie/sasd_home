@@ -5,7 +5,7 @@
         </slot>
         <div class="table" :class="[tableClass]">
             <div class="loadSource" v-show="tableLoading"><!-- v-show="tableLoading"-->
-                <p><img :src="loadingTheme" alt="" width="80" height="80"></p>
+                <p><img :src="Config.loadingImg" alt="" width="80" height="80"></p>
                
             </div>
             <slot name="panel-content">

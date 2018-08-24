@@ -2,7 +2,7 @@
     <section class="loginNav">
         <div class="logo">
             <router-link to="/welcome/index">
-                <img src="../assets/images/logo_white.svg" alt="">
+                <img :src="Config.welLogoWhite" alt="" height="37">
             </router-link>
         </div>
         <div>

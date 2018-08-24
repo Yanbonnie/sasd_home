@@ -114,7 +114,7 @@
             <div v-show ="step == 3" class="success">
                 <i class="iconfont icon-success"></i>
                 <h3>你的账户已创建</h3>
-                <p>实名认证后，在真宜签签署的合同一旦发生纠纷，<br/>可申请司法鉴定，提供仲裁等法律保障服务</p>
+                <p>实名认证后，在{{Config.Title}}签署的合同一旦发生纠纷，<br/>可申请司法鉴定，提供仲裁等法律保障服务</p>
                 <a href="javascript:;" class="shengji">即将为您跳转至登录页</a>
             </div>
         </div>

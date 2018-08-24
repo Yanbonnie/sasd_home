@@ -164,7 +164,7 @@
             },
             allowDrop(ev){
                 $('.tree-title strong').css({'color':''});
-                $(ev.currentTarget).css({'color':this.activeColor});
+                $(ev.currentTarget).css({'color':this.Config.activeColor});
                  ev.preventDefault();
             },
             drop(ev,dropData){

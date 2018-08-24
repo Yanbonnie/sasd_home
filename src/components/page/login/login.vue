@@ -7,10 +7,7 @@
                 <i class="iconfont icon-ewm_real" v-show="step == 4" @click="scanLogin"></i>
                 <i class="iconfont icon-pc" v-show="step==5" @click="accountLogin"></i>
             </div>
-            <img v-if="ThemeColor == 'red'" class="logo" src="../../../assets/images/logo_header.png" alt="" width="126">
-            <div v-if="ThemeColor == 'blue'" class="logo">
-                电子合同系统
-            </div>
+            <img  class="logo" :src="Config.welLogo" alt="" width="126">
             <!--扫码登录-->
             <div class="loginLoad" v-show="step != 4 && step != 5">
                 
@@ -38,7 +35,7 @@
                     <a href="javascript:;" class="changeAccount" @click="cloudSignLogin">切换账号</a>
                 </div>
             </div>            
-            <p class="tipTxt" v-show="step == 1 || step == 2">使用手机真宜签扫码登录</p>
+            <p class="tipTxt" v-show="step == 1 || step == 2">使用手机{{Config.Title == '真宜签' ? '真宜签' : ''}}APP扫码登录</p>
             <!--账号登录-->
             <div class="loginAccount" v-show="step == 4">
                 <div class="formBox">

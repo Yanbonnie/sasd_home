@@ -3,7 +3,7 @@ export default {
         let localHost = window.location.host;
         let apiPath = '';
         let signState = null;   //签署状态，是本地还是生产。
-        if(localHost == 'localhost:8088' || localHost == '192.168.22.212:8088') { //本地环境
+        if(localHost == 'localhost:8089' || localHost == '192.168.22.212:8089') { //本地环境
             apiPath = "/proxy/";  
             signState = false;   //本地
         }else {
@@ -19,9 +19,9 @@ export default {
         Vue.prototype.accountType = localStorage.getItem('accountType') || null;    //1表示托管  0-表示Ukey
         
         //红色
-        Vue.prototype.ThemeColor = 'red';
-        Vue.prototype.loadingTheme = require('../images/loading.gif');  
-        Vue.prototype.activeColor = '#ff563f';   
+        // Vue.prototype.ThemeColor = 'red';
+        // Vue.prototype.loadingTheme = require('../images/loading.gif');  
+        // Vue.prototype.activeColor = '#ff563f';   
     
     
     

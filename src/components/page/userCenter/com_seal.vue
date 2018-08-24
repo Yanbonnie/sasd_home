@@ -22,7 +22,7 @@
             <!-- <a href="javascript:;" @click="getCert(1)">{{addCertBtn}}</a>      -->
         </div>
         <div class="loadSource" style="top:400px;" v-show="certLoading" ><!---->
-            <p><img :src="loadingTheme" alt="" width="80" height="80"></p>
+            <p><img :src="Config.loadingImg" alt="" width="80" height="80"></p>
         </div>
         
 

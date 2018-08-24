@@ -16,10 +16,6 @@
     &.fixTop{
         background: #fff;
         box-shadow: 0 0 5px #ccc;
-        .headerL{
-            background: url($URL+'welcome_red_logo.svg') no-repeat center center;
-            background-size: 116px 37px;
-        }
         .headerR{
             .navRight{
                 .navSideLift{
@@ -47,11 +43,19 @@
         height: 66px;
     }
     .headerL{
-        flex-basis: 136px;
-        height: 57px;
-        align-self: center;
-        background: url($URL+'welcome_white_logo.png') no-repeat center 5px;
-        background-size: 136px 57px;
+        // width: 116px;
+        display: flex;
+        justify-content: flex-start;
+        height: 37px;
+        img{
+            width: auto;
+            height: 100%;
+        }
+        // flex-basis: 136px;
+        // height: 57px;
+        // align-self: center;
+        // background: url($URL+'welcome_white_logo.png') no-repeat center 5px;
+        // background-size: 136px 57px;
     }
     .headerR{
         flex-grow: 1;
@@ -111,6 +115,7 @@
     }
 }
 .banner{
+    display: block;
     .swiper-container {
         width: 100%;
         height: 750px;
@@ -536,3 +541,77 @@
         }
     }
 }
+
+
+.fiexd-right{
+    width: 80px;
+    position:fixed;
+    right: 0;
+    top:50%;
+    margin-top:-100px;
+    z-index: 100;
+    &.marginTopZero{
+        margin-top:0;
+    }
+    .fixed-icon{
+      display: block;
+      width: 40px;
+      height: 40px;
+      margin:10px 0;
+      border-radius:100%;
+      line-height: 60px;
+      background:rgba(0,0,0,0.5);
+      text-align: center;
+       line-height: 40px;
+       cursor: pointer;
+       color: #fff;
+       position:relative;         
+      i{
+        font-size:16px;         
+        text-align: center;
+        &.icon-top02{
+            font-size: 20px;
+        }
+      }
+      &:hover{
+        background: $ACTIVECOLOR;
+      }
+    }
+    .service{
+      .hover-box{
+        position:absolute;
+        z-index: 10;
+        width: 280px;
+        background:#fff;
+        font-size: 12px;
+        box-shadow:0 0 5px #ccc;
+        right:60px;
+        top:50%;
+        padding:15px;
+        transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        border-radius:6px;
+        display: none;
+        li{
+          text-align: left;
+          height: 35px;
+          line-height: 35px;
+          color: #000;
+          img{
+            float: left;
+            margin-right:10px;
+            margin-top:8px;
+          }
+          span{
+            cursor: default;
+          }
+          a{
+            color: #2684DC;
+            &:hover{
+              color:$ACTIVECOLOR;
+            }
+          }
+        }
+      }
+    }
+  }

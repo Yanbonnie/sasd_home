@@ -1,19 +1,19 @@
 <template>
     <section>
-        <div class="banner">
+        <div class="banner" data-scroll-reveal="enter top and move 40px over 1s">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="../../../assets/images/welcome/banner.png" alt="" />
+                        <img src="../../../assets/images/welcome/banner.jpg" alt="" />
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <img src="../../../assets/images/welcome/banner2.png" alt="" />
-                    </div>
+                    </div> -->
                 </div>
-                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-pagination"></div> -->
             </div>
         </div>
-        <div class="tab1">
+        <div class="tab1"  data-scroll-reveal>
             <div class="weContain">
                 <h3>让签署更轻松、更安全</h3>
                 <div class="tabContain">
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="tab2">
-            <div class="weContain">
+            <div class="weContain" data-scroll-reveal>
                 <h3>丰富的产品应用</h3>
                 <div class="tabContain">
                     <div class="item">
@@ -68,14 +68,14 @@
                 </div>
             </div>
         </div>
-        <div class="tab3">
+        <div class="tab3" data-scroll-reveal>
             <div class="weContain">
                 <h3>技术支持和服务</h3>
                 <div class="tabContain">
                     <div>
                         <img src="../../../assets/images/welcome/icon1.png" width="95" alt="">
                         <h4>身份认证服务</h4>
-                        <p>真宜签与多家国家权威数字证书认证中心合作，为认证用户颁发数字证书并对证书的申请、访问、验证提供完善的管理服务</p>
+                        <p>{{Config.Title}}与多家国家权威数字证书认证中心合作，为认证用户颁发数字证书并对证书的申请、访问、验证提供完善的管理服务</p>
                     </div>
                     <div>
                         <img src="../../../assets/images/welcome/icon2.png" width="95" alt="">
@@ -107,7 +107,7 @@
                 </div>
             </div>
         </div>
-        <div class="tab4">
+        <div class="tab4" data-scroll-reveal>
             <div class="weContain">
                 <h3>广泛的应用场景</h3>
                 <div class="tabContain">
@@ -120,50 +120,50 @@
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/2.png" alt="">
-                            <p>传统制造业</p>
+                            <p>B2B电商</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/3.png" alt="">
-                            <p>传统制造业</p>
+                            <p>互联网金融</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/4.png" alt="">
-                            <p>传统制造业</p>
+                            <p>服务</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/5.png" alt="">
-                            <p>传统制造业</p>
+                            <p>旅游</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/6.png" alt="">
-                            <p>传统制造业</p>
+                            <p>物流快递</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/7.png" alt="">
-                            <p>传统制造业</p>
+                            <p>制造零售</p>
                         </div>
                     </div>
                     <div class="item">
                         <div>
                             <img src="../../../assets/images/welcome/8.png" alt="">
-                            <p>传统制造业</p>
+                            <p>更多</p>
                         </div>
                     </div>
 
                 </div>
             </div>
         </div>
-        <div class="tab5">
+        <div class="tab5" data-scroll-reveal>
             <div class="weContain">
                 <h3>他们都在用我们的产品</h3>
                 <p class="tip">我们的用户遍布<span>互联网、通讯、金融、咨询、零售快消、高校、政府、物流、地产</span> 等众多领域。<br>远程签署用户的首选工具，前所未有的效率提升</p>
@@ -204,6 +204,7 @@
     </section>
 </template>
 <script>
+    import '@/assets/js/plugin/scrollReveal.js';
     const SwiperPlugin = require('@/assets/js/slide/swiper.min.js');
     export default{
         name:'welcomeIndex',
@@ -237,6 +238,8 @@
                     prevEl: '.swiper-button-prev',
                 },
             });
+            window.scrollReveal = new scrollReveal({ reset: false, move: '80px',opacity: 0.3,  enter: 'bottom',});
+            
         },
     }
 </script>

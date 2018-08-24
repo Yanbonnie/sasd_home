@@ -353,6 +353,7 @@ let router = new Router({
 
 //路由跳转之前
 router.beforeEach(async (to, from, next) => {
+  document.title=Vue.prototype.Config.Title+',让签署更有效';
   document.body.scrollTop = 0;  
   Vue.prototype.HEIGHT = $(document).height();
   Vue.prototype.userType = to.meta.type;

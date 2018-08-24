@@ -656,7 +656,8 @@
                     This.loadingState = true;
                     let render = new FileReader();
                     render.readAsDataURL(file);
-                    render.onload=function(){
+                    render.onload=function(e){
+                        console.log(e.target.result)
                         This.REQUEST('POST',This.URL['saveIcon'],{
                             icon:this.result.split(',')[1]
                         }).then(({meta,data})=>{

@@ -24,7 +24,7 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8088,
+    port: 8089,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
@@ -32,8 +32,8 @@ module.exports = {
         '/proxy/': {
             // target:'http://192.168.22.212:8080',  //宝妮本地
             // target:'http://192.168.22.234:8080',  //  良兴本地
-            // target:'http://192.168.10.141',          //测试环境
-            target:'https://justsign2.95105813.cn',          //测试环境
+            target:'http://192.168.10.141',          //测试环境
+            // target:'https://justsign2.95105813.cn',          //测试环境
             // target:"http://192.168.22.250:8080",        //经词本地
             // target:"http://192.168.10.141:82",          //代理经词本地
             // target:'http://jsign.95105813.cn',       //测试环境

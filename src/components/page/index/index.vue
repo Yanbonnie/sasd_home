@@ -50,7 +50,7 @@
         <div class="realNo" v-if="CURACCOUNT.accStstus != '003'">
             <div class="realIn">
                 <div class="realitem">
-                    <p>真宜签的账号还未进行<a href="javascript:;" @click="realClick">实名认证</a>，认证后将获得以下真宜签专业电子合同服务</p>
+                    <p>{{Config.Title}}的账号还未进行<a href="javascript:;" @click="realClick">实名认证</a>，认证后将获得以下{{Config.Title}}专业电子合同服务</p>
                     <ul class="clf">
                         <li>专属CA证书</li>
                         <li>签发电子合同资格</li>
@@ -314,7 +314,7 @@
         </alertModel> -->
         <Loading :text="'身份证识别中,请稍等'" v-show="realState"></Loading>
         <!-- 确认扫码实名认证 -->
-        <alertModel :title="'当前用户与真宜签用户信息不匹配'"  :type="2" :alelrtClassWidth="'600px'"  v-show="scanState"  @cancelHandle="cancelScanHandle" @sureHandle="sureScanHandle">
+        <alertModel :title="'当前用户与'+Config.Title+'用户信息不匹配'"  :type="2" :alelrtClassWidth="'600px'"  v-show="scanState"  @cancelHandle="cancelScanHandle" @sureHandle="sureScanHandle">
             <div slot="alert-content" class="scan-model">
                 <p v-show="!matching.name">当前用户的姓名<span>{{scanData.curName}}</span>将更改为<span>{{scanData.authName}}</span></p>
                 <p v-show="!matching.phone">当前用户的手机<span>{{scanData.curPhone}}</span>将更改为<span>{{scanData.authPhone}}</span></p>

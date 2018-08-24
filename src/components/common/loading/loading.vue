@@ -9,7 +9,7 @@
 			  <div :style="{background:color}"></div>
 			  <div :style="{background:color}"></div>
 			  <div :style="{background:color}"></div> -->
-        <img :src="loadingTheme" alt="" width="80" height="80">
+        <img :src="Config.loadingImg" alt="" width="80" height="80">
 		</div>
     <!-- <div class="progress">
         <div class="bar"></div >

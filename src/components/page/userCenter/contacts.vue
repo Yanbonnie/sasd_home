@@ -24,7 +24,7 @@
                     <h3>标签</h3>
                     <div class="clf bookList sign_page_scroll">
                         <p class="noMsg" v-show="menu.length == 0 && !labelState"><span>暂无数据</span></p>
-                        <p class="loading" v-show="labelState"><img :src="loadingTheme" width="50" alt=""></p>
+                        <p class="loading" v-show="labelState"><img :src="Config.loadingImg" width="50" alt=""></p>
                         <div class="item">
                             <div>
                                 <Tree   

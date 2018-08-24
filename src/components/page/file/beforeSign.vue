@@ -688,7 +688,7 @@
                 }else if(getHashResult == '006'){
                     alertTxt = '其他人正在签署';
                 }else if(getHashResult == '008'){
-                    alertTxt = '真宜签用户正在签署';
+                    alertTxt = `${this.Config.Title}用户正在签署`;
                 }else if(getHashResult == '009'){
                     alertTxt = '文档版本不一致，请重新刷新页面';
                 }else if(getHashResult == '007'){

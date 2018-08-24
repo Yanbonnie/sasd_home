@@ -8,7 +8,7 @@
                 <p class="iconP" v-if="docId && !uploadFileState"><i class="iconfont icon-success"></i></p>
                 <!--<p class="iconP" v-if="!signFile && againState == 2"><i class="iconfont icon-warn"></i></p>上传文件被中断
                 <p class="iconP" v-if="!signFile && againState == 2">上传文件被中断,请重新上传</p>          上传文件被中断-->
-                <p class="iconP" v-if="uploadFileState && signFile"><img :src="loadingTheme" width="" height="50" alt=""></p>
+                <p class="iconP" v-if="uploadFileState && signFile"><img :src="Config.loadingImg" width="" height="50" alt=""></p>
                 <p class="title"><span>{{pdfFileName ? pdfFileName : signTitle}}</span><a href="javascript:;" id="againUpLoad">{{docId ? '重新上传' : '上传文件'}}</a></p>
                 <p class="tip" style="display:none;"><i class="iconfont icon-circle"></i>在签署文件首页添加<a>《仲裁条款》</a>若双方另行约定了管辖方式，请勿勾选</p>
             </div>

@@ -27,6 +27,11 @@ Vue.prototype.validateQb =  require('@/assets/js/validate.js').default;
 import MyPlugin from './assets/js/common.js'
 Vue.use(MyPlugin)
 
+
+import ConfigPlugin from './assets/js/config.js'
+Vue.use(ConfigPlugin)
+
+
 //模态框公共组件
 import Model from './components/common/model/index.js';
 Vue.use(Model)
@@ -60,7 +65,7 @@ Vue.use(dragModel)
 
 
 // import '@/assets/js/plugin/jquery-1.8.3.min.js'
-import '@/assets/js/plugin/jquery.form.js'
+import '@/assets/js/plugin/jquery.form.js';
 
 /*时间戳转换北京时间*/
 Vue.filter('filterdata', function (value,index,second) {//value为13位的时间戳  index为0的话是永久有效，为1的话是为空   second(是否包含时分秒)
