@@ -20,7 +20,7 @@ export default{
             }
         }
 
-        const Config = configObj.pensoon;
+        const Config = configObj.zyq;
 
         Vue.prototype.Config = Config;
     }
