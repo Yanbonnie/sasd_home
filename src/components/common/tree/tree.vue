@@ -244,7 +244,9 @@
         props:{
             data:{
                 type:Array,
-                default:[]
+                default:function(){
+                    return []
+                }
             },
             tabId:{        //默认选中
                 type:String,

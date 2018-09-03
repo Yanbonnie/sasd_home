@@ -65,7 +65,9 @@ Vue.component('tree-list',{
     props:{
         treeListData:{
             type:Array,
-            default:[]
+            default:function(){
+                return []
+            }
         },
     },
     template:`
@@ -92,7 +94,9 @@ export default {
     props:{
         treeListData:{
             type:Array,
-            default:[]
+            default:function(){
+                return []
+            }
         }
     },
     methods:{

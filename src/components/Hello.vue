@@ -1,7 +1,11 @@
 <template>
 	<div class="right_col">
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-        <p class="hello">{{msg}}</p>
+		<!-- 模态框公共组件 -->
+		<!-- <Model></Model>	 -->
+		<h3>分页组件</h3>
+		<pagination  :total="100" :currentpage="2"></pagination>
+		<h3>树形菜单</h3>
+		<Dendrogram :treeListData="treeListData"></Dendrogram>
 	</div>
 </template>
 
@@ -11,30 +15,46 @@ export default {
 	name: 'hello',
 	data () {
 		return {
-		    msg: 'Welcome to Your Vue.js'
+			treeListData:[
+				{
+					title:"数安时代",
+					pid:[1,2,3,4],
+					children:[
+						{
+							title:"第二级",
+							pid:[1,2,3],
+							children:[
+								{
+									title:'第三级',
+									pid:[1]
+								}
+							]
+						}
+					]
+				},
+				{
+					title:'广州极米',
+					pid:[1,2,3],
+					children:[
+						{
+							title:"技术部",
+							pid:[1,1,1,1,1]
+						},
+						{
+							title:"人事部",
+							pid:[1,1,1,1,1]
+						}
+					]
+				},
+				{
+					title:'广东信鉴',
+					pid:[]
+				}
+				
+			]
 		}
 	},
 	mounted(){
-		$(function(){
-			$("input[type=button]").click(function(){
-				addTag("em",temText);
-			});
-			$("#Editor a").mouseup(function(){
-				temText=getSelText();
-			});
-		});
-		var temText="";
-		function addTag(tagName,textVal){
-			var obj  = $("#Editor a");
-			var tagHtml = "<"+tagName+">"+textVal+"</"+tagName+">";
-			var html = $(obj).html();
-			html = html.replace(textVal,tagHtml);
-			$(obj).html(html);
-		}
-		
-		function getSelText() {
-			return $.browser.msie?document.selection.createRange().text:document.getSelection();
-		}
 	}
 }
 </script>
