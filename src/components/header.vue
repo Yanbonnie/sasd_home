@@ -103,7 +103,7 @@
     import pinCom from '@/components/common/setPin/setPin';
     import { upLoadDate,upLoadMethod} from '@/assets/js/uploadFile.js';
     export default {
-        name:'header',
+        name:'Header',
         data(){
             return{
                 loadingState:false,

@@ -46,7 +46,7 @@
 </template>
 <script>
     export default{
-        name:'table',
+        name:'tableDom',
         data(){
             return{
                 currentpageIndex:this.currentpage

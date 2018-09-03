@@ -19,7 +19,7 @@
 
 <script>
 export default {
-	name: 'dialog',
+	name: 'Dialog',
 	props: {
 		dialogOption: {
             type:Object,
