@@ -29,25 +29,21 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-        '/proxy/': {
-            // target:'http://192.168.22.212:8080',  //宝妮本地
-            // target:'http://192.168.22.234:8080',  //  良兴本地
+        '/proxy': {
             target:'http://192.168.10.141',          //测试环境
-            // target:'https://justsign2.95105813.cn',          //测试环境
-            // target:"http://192.168.22.250:8080",        //经词本地
-            // target:"http://192.168.10.141:82",          //代理经词本地
-            // target:'http://jsign.95105813.cn',       //测试环境
-            // target:'http://192.168.8.123:8081',      //嘉俊
-            changeOrigin: true,
+            // target:"http://192.168.22.250:8080",  //经词本地
+            // target:"http://192.168.10.141:82",    //代理经词本地
+            changeOrigin: true,                         //允许跨域
+            secure:false,    //false  http协议   true https协议
             pathRewrite: {
-              '^/proxy': ''
+              '^/proxy': ''   //路径改写规则    
             }
         },
         '/pdf':{
           target:'www.zhenyiqian.com',
           changeOrigin:true,
           pathRewrite:{
-            '^/pdf':'/'
+            '^/pdf':''
           }
         }
     },
